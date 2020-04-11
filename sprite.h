@@ -8,3 +8,5 @@ typedef struct {
 Sprite spriteFromFile(char[]);
 void renderSprite(Sprite);
 void destroySprite(Sprite *);
+
+extern SDL_Renderer* RENDERER;

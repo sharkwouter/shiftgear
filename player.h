@@ -1,13 +1,17 @@
 #include "sprite.h"
 
 typedef struct {
-    int x;
-    int y;
+    int lane;
     Sprite sprite;
 } Player;
 
-Player player;
+Player createPlayer();
+void movePlayer(Player *, int);
+void drawPlayer(Player *);
+void destroyPlayer(Player *);
+void printPlayer(Player *);
 
-Player createPlayer(int x, int y);
-void movePlayer();
-void printPlayer();
+extern int LANES;
+extern int LANE_WIDTH;
+extern int LANE_OFFSET;
+extern char IMAGE_PLAYER[];

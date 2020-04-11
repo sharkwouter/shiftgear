@@ -1,5 +1,6 @@
 #include <SDL2/SDL.h>
-#include "sprite.h"
+#include <stdio.h>
+#include "player.h"
 
 char running;
 
@@ -8,3 +9,5 @@ void handleEvents();
 void update();
 void render();
 int quit();
+
+extern SDL_Renderer* RENDERER;

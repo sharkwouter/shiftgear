@@ -1,5 +1,4 @@
 #include "sprite.h"
-#include "constants.h"
 
 Sprite spriteFromFile(char location[]) {
     Sprite temp;
@@ -26,5 +25,5 @@ void renderSprite(Sprite sprite) {
 }
 
 void destroySprite(Sprite *sprite) {
-        SDL_DestroyTexture(sprite->texture);
+    SDL_DestroyTexture(sprite->texture);
 }
