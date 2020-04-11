@@ -72,6 +72,6 @@ int quit() {
     destroyPlayer(&player);
     SDL_DestroyRenderer(RENDERER);
     SDL_DestroyWindow(window);
-	SDL_Quit();
-	return 0;
+    SDL_Quit();
+    return 0;
 }
