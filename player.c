@@ -27,8 +27,8 @@ void movePlayer(Player *player, int movement) {
     }
 }
 
-void drawPlayer(Player *player){
-    renderSprite(player->sprite);
+void drawPlayer(Player player){
+    renderSprite(player.sprite);
 }
 
 void destroyPlayer(Player *player) {

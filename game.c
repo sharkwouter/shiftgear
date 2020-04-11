@@ -10,8 +10,8 @@ void loadMedia();
 char running = 0;
 
 SDL_Window* window = NULL;
-SDL_Surface* background = NULL;
 
+Sprite background;
 Player player;
 
 SDL_Event event;
@@ -35,7 +35,7 @@ void init(){
 
 void loadMedia(){
     // Load background image
-    background = SDL_LoadBMP("images/road.bmp");
+    background = spriteFromFile(IMAGE_BACKGROUND);
 
     player = createPlayer();
 }
@@ -67,7 +67,8 @@ void update(){}
 
 void render(){
     SDL_RenderClear(RENDERER);
-    drawPlayer(&player);
+    renderSprite(background);
+    drawPlayer(player);
     SDL_RenderPresent(RENDERER);
 }
 

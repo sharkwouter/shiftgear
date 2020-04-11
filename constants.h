@@ -1,5 +1,3 @@
-#ifndef CONSTANTS_LOADED
-#define CONSTANTS_LOADED
 #include <SDL2/SDL.h>
 
 // PSP screensize
@@ -20,5 +18,5 @@ enum state {
 };
 
 // Image locations
-const char IMAGE_PLAYER[] = "images/car.bmp";
-#endif
+char IMAGE_PLAYER[] = "images/car.bmp";
+char IMAGE_BACKGROUND[] = "images/road.bmp";

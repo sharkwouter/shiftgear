@@ -10,4 +10,5 @@ void update();
 void render();
 int quit();
 
+extern char IMAGE_BACKGROUND[];
 extern SDL_Renderer* RENDERER;

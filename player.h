@@ -7,11 +7,11 @@ typedef struct {
 
 Player createPlayer();
 void movePlayer(Player *, int);
-void drawPlayer(Player *);
+void drawPlayer(Player);
 void destroyPlayer(Player *);
 void printPlayer(Player *);
 
-extern int LANES;
-extern int LANE_WIDTH;
-extern int LANE_OFFSET;
+extern const int LANES;
+extern const int LANE_WIDTH;
+extern const int LANE_OFFSET;
 extern char IMAGE_PLAYER[];
