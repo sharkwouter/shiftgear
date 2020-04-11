@@ -1,3 +1,6 @@
+#pragma once
+#ifndef SPRITE_H
+#define SPRITE_H
 #include <SDL2/SDL.h>
 
 typedef struct {
@@ -6,7 +9,6 @@ typedef struct {
 } Sprite;
 
 Sprite spriteFromFile(char[]);
-void renderSprite(Sprite);
+void drawSprite(Sprite);
 void destroySprite(Sprite *);
-
-extern SDL_Renderer* RENDERER;
+#endif

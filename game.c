@@ -1,9 +1,5 @@
 #include "game.h"
-
-#define GAME_NAME "Shiftgear"
-
-#define SCREEN_WIDTH 480
-#define SCREEN_HEIGHT 272
+#include "constants.h"
 
 void loadMedia();
 
@@ -11,7 +7,8 @@ char running = 0;
 
 SDL_Window* window = NULL;
 
-Sprite background;
+const int backgroundTiles = 8;
+Sprite background[8];
 Player player;
 
 SDL_Event event;
@@ -35,7 +32,7 @@ void init(){
 
 void loadMedia(){
     // Load background image
-    background = spriteFromFile(IMAGE_BACKGROUND);
+    createBackground(background, backgroundTiles);
 
     player = createPlayer();
 }
@@ -67,7 +64,7 @@ void update(){}
 
 void render(){
     SDL_RenderClear(RENDERER);
-    renderSprite(background);
+    drawBackground(background);
     drawPlayer(player);
     SDL_RenderPresent(RENDERER);
 }

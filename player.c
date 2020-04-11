@@ -1,5 +1,4 @@
 #include "player.h"
-#include <stdio.h>
 
 #define PLAYER_X 8
 
@@ -28,7 +27,7 @@ void movePlayer(Player *player, int movement) {
 }
 
 void drawPlayer(Player player){
-    renderSprite(player.sprite);
+    drawSprite(player.sprite);
 }
 
 void destroyPlayer(Player *player) {

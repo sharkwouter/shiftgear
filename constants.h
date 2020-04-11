@@ -1,8 +1,13 @@
+#pragma once
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
 #include <SDL2/SDL.h>
 
 // PSP screensize
-const int SCREEN_WIDTH = 480;
-const int SCREEN_HEIGHT = 272;
+#define GAME_NAME "Shiftgear"
+
+#define SCREEN_WIDTH 480
+#define SCREEN_HEIGHT 272
 
 // constants for where the lanes are on the y access
 const int LANES = 4;
@@ -20,3 +25,4 @@ enum state {
 // Image locations
 char IMAGE_PLAYER[] = "images/car.bmp";
 char IMAGE_BACKGROUND[] = "images/road.bmp";
+#endif

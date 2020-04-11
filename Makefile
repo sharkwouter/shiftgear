@@ -1,5 +1,5 @@
 TARGET = shiftgear
-OBJS = main.o game.o player.o sprite.o
+OBJS = main.o game.o player.o sprite.o background.o
 
 CFLAGS = -Wall -Wextra
 CXXFLAGS = $(CFLAGS)

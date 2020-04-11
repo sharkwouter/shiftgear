@@ -1,5 +1,7 @@
 #include "sprite.h"
 
+extern SDL_Renderer* RENDERER;
+
 Sprite spriteFromFile(char location[]) {
     Sprite temp;
 
@@ -20,7 +22,7 @@ Sprite spriteFromFile(char location[]) {
     return temp;
 }
 
-void renderSprite(Sprite sprite) {
+void drawSprite(Sprite sprite) {
     SDL_RenderCopy(RENDERER, sprite.texture, NULL, &sprite.rect);
 }
 
