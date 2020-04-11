@@ -46,14 +46,17 @@ void handleEvents(){
             running = 0;
         }
         else if (event.type == SDL_KEYDOWN) {
-            printf("Something is happening!\n");
             switch( event.key.keysym.sym ) {
                 case SDLK_w:
+                case SDLK_a:
                 case SDLK_UP:
+                case SDLK_LEFT:
                     movePlayer(&player, -1);
                     break;
                 case SDLK_s:
+                case SDLK_d:
                 case SDLK_DOWN:
+                case SDLK_RIGHT:
                     movePlayer(&player, 1);
                     break;
             }
