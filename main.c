@@ -1,4 +1,5 @@
 #include "game.h"
+#include "constants.h"
 
 int main(int argc, char* args[]) {
 	init();

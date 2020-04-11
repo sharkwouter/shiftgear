@@ -1,7 +1,16 @@
 #include "player.h"
 #include <stdio.h>
 
-Player player;
+Player createPlayer(int x, int y){
+    Player player;
+    player.x = x;
+    player.y = y;
+
+    player.sprite = spriteFromFile("images/car.bmp");
+
+    return player;
+}
+
 
 void movePlayer(int x, int y) {
     player.x += x;
