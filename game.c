@@ -46,20 +46,14 @@ void handleEvents(GameState* gameState) {
         } else if (gameState->event.type == SDL_KEYDOWN) {
             switch(gameState->event.key.keysym.sym) {
             case SDLK_w:
-                break;
             case SDLK_a:
-                break;
             case SDLK_UP:
-                break;
             case SDLK_LEFT:
                 movePlayer(&gameState->player, -1);
                 break;
             case SDLK_s:
-                break;
             case SDLK_d:
-                break;
             case SDLK_DOWN:
-                break;
             case SDLK_RIGHT:
                 movePlayer(&gameState->player, 1);
                 break;
