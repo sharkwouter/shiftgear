@@ -1,14 +1,16 @@
+#include "game_state.h"
 #include "game.h"
 
-int main(int argc, char* args[]) {
-	init();
+// int main(int argc, char** argv) {
+int main() {
+	GameState gameState = init();
 
 	while (running) {
-		handleEvents();
+		handleEvents(&gameState);
 		update();
-		render();
+		render(&gameState);
 		SDL_Delay(1000/60);
 	}
 
-	return quit();
+	return quit(&gameState);
 }

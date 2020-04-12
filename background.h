@@ -1,7 +1,9 @@
-#include "sprite.h"
-void createBackground(Sprite*, const int);
-void drawBackground(Sprite* *);
+#ifndef BACKGROUND_H
+#define BACKGROUND_H
 
-extern char IMAGE_BACKGROUND[];
-extern const int LANE_WIDTH;
-extern SDL_Renderer* RENDERER;
+#include "sprite.h"
+
+void createBackground(SDL_Renderer*, Sprite*, const size_t);
+void drawBackground(SDL_Renderer*, Sprite*, size_t);
+
+#endif // BACKGROUND_H

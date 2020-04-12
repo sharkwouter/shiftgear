@@ -1,17 +1,17 @@
+#ifndef PLAYER_H
+#define PLAYER_H
+
 #include "sprite.h"
 
-typedef struct {
+typedef struct Player {
     int lane;
     Sprite sprite;
 } Player;
 
-Player createPlayer();
-void movePlayer(Player *, int);
-void drawPlayer(Player);
-void destroyPlayer(Player *);
-void printPlayer(Player *);
+Player createPlayer(SDL_Renderer*);
+void movePlayer(Player*, int);
+void drawPlayer(SDL_Renderer*, Player);
+void destroyPlayer(Player*);
+void printPlayer(Player*);
 
-extern const int LANES;
-extern const int LANE_WIDTH;
-extern const int LANE_OFFSET;
-extern char IMAGE_PLAYER[];
+#endif // PLAYER_H

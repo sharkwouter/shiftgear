@@ -1,15 +1,15 @@
+#ifndef GAME_H
+#define GAME_H
+
 #include <SDL2/SDL.h>
-#include <stdio.h>
-#include "player.h"
-#include "background.h"
+#include "game_state.h"
 
 char running;
 
-void init();
-void handleEvents();
+GameState init();
+void handleEvents(GameState* gameState);
 void update();
-void render();
-int quit();
+void render(GameState* gameState);
+int quit(GameState* gameState);
 
-extern char IMAGE_BACKGROUND[];
-extern SDL_Renderer* RENDERER;
+#endif // GAME_H
