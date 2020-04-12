@@ -17,10 +17,6 @@ Sprite spriteFromFile(SDL_Renderer* renderer, const char* location) {
 
     SDL_QueryTexture(temp.texture, NULL, NULL, &temp.rect.w, &temp.rect.h);
 
-    // TODO: Change this later
-    temp.rect.x = 150;
-    temp.rect.y = 150;
-
     return temp;
 }
 

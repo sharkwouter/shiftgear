@@ -15,6 +15,7 @@ Player createPlayer(SDL_Renderer* renderer) {
     player.sprite = spriteFromFile(renderer, IMAGE_PLAYER);
     player.sprite.rect.h = 64;
     setPlayerY(&player);
+    player.sprite.rect.x = PLAYER_X;
 
     return player;
 }
