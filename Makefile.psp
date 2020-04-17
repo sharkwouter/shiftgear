@@ -1,0 +1,18 @@
+TARGET = shiftgear
+OBJS = main.o game.o player.o sprite.o background.o constants.o
+
+PSPSDK = $(shell psp-config --pspsdk-path)
+PSPPREFIX = $(shell psp-config --psp-prefix)
+
+CFLAGS = -Wall -Wextra
+CXXFLAGS = $(CFLAGS)
+
+LIBS = -lSDL2 -lGL -lGLU -lglut -lz -lpspvfpu -lpsphprm -lpspsdk -lpspctrl -lpspumd -lpsprtc \
+       -lpsppower -lpspgum -lpspgu -lpspaudiolib -lpspaudio -lpsphttp -lpspssl -lpspwlan \
+	   -lpspnet_adhocmatching -lpspnet_adhoc -lpspnet_adhocctl -lm -lpspvram
+
+PSP_FW_VERSION=500
+EXTRA_TARGETS = EBOOT.PBP
+PSP_EBOOT_TITLE = Shiftgear
+
+include $(PSPSDK)/lib/build.mak

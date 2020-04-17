@@ -1,6 +1,12 @@
 #include "game_state.h"
 #include "game.h"
 
+#ifdef PSP
+#include <pspkernel.h>
+PSP_MODULE_INFO("Shiftgear", 0, 1, 1);
+PSP_MAIN_THREAD_ATTR(THREAD_ATTR_USER);
+#endif
+
 // int main(int argc, char** argv) {
 int main() {
 	GameState gameState = init();
